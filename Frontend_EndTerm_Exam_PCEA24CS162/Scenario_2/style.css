@@ -1,0 +1,90 @@
+:root {
+  --bg: #f3f6fc;
+  --text: #1e2430;
+  --card: #ffffff;
+  --accent: #3b73c5;
+}
+
+body.dark {
+  --bg: #11131a;
+  --text: #e6e9f2;
+  --card: #1d2230;
+  --accent: #689bf2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  padding: 32px 20px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.top-bar h1 {
+  font-size: 2rem;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent);
+  color: var(--card);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.25s ease;
+}
+
+.card h2 {
+  color: var(--accent);
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.card .meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.card .content {
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
